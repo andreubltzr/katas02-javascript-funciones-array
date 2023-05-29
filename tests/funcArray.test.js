@@ -55,10 +55,10 @@ describe("Finding Longest Word - findLongestWord #2", () => {
     assert.strictEqual(findLongestWord(["test"]), "test");
   });
 
-  // it("returns the first occurrence word when longest have multiple occurrences ", () => {
-  //   assert.strictEqual(findLongestWord(["foo", "bar"]), "foo");
-  //   assert.strictEqual(findLongestWord(["bar", "foo"]), "bar");
-  // });
+  it("returns the first occurrence word when longest have multiple occurrences ", () => {
+    assert.strictEqual(findLongestWord(["foo", "bar"]), "foo");
+    assert.strictEqual(findLongestWord(["bar", "foo"]), "bar");
+  });
 
   // it("returns the longest occurrence when test has multiple words", () => {
   //   let words = ["a", "zab", "12abc", "$$abcd", "abcde", "factoriaF5"];
