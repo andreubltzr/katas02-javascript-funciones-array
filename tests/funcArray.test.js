@@ -1,5 +1,5 @@
-import { describe, it } from "node:test";
-import assert from "node:assert/strict";
+import { describe, it } from 'node:test';
+import assert from 'node:assert/strict';
 import {
   maxOfTwoNumbers,
   findLongestWord,
@@ -10,10 +10,9 @@ import {
   doesWordExist,
   howManyTimes,
   greatestProduct,
-} from "../src/funcArray.js";
+} from '../src/funcArray.js';
 
 const shuffle = (currentArray) => {
-  // let array = currentArray.slice();
   let array = [...currentArray];
   let counter = array.length;
   while (counter > 0) {
@@ -23,261 +22,258 @@ const shuffle = (currentArray) => {
   return array;
 };
 
-// it("1+1 = 2", () => assert.strictEqual(1 + 1, 2));
+it('1+1 = 2', () => assert.strictEqual(1 + 1, 2));
 
-/* describe("Find the maximun - maxOfTwoNumbers #1", () => {
-  it("Defines maxOfTwoNumbers", () => {
-    assert.strictEqual(typeof maxOfTwoNumbers, "function");
+describe('Find the maximun - maxOfTwoNumbers #1', () => {
+  it('Defines maxOfTwoNumbers', () => {
+    assert.strictEqual(typeof maxOfTwoNumbers, 'function');
   });
-  it("First parameter larger", () => {
+  it('First parameter larger', () => {
     assert.strictEqual(maxOfTwoNumbers(2, 1), 2);
   });
 
-  it("Second parameter larger", () => {
+  it('Second parameter larger', () => {
     assert.strictEqual(maxOfTwoNumbers(1, 3), 3);
   });
 
-  it("First and Second parameter equal", () => {
+  it('First and Second parameter equal', () => {
     assert.strictEqual(maxOfTwoNumbers(4, 4), 4);
   });
-}); */
+});
 
-describe("Finding Longest Word - findLongestWord #2", () => {
-  it("Defines findLongestWord", () => {
-    assert.strictEqual(typeof findLongestWord, "function");
+describe('Finding Longest Word - findLongestWord #2', () => {
+  it('Defines findLongestWord', () => {
+    assert.strictEqual(typeof findLongestWord, 'function');
   });
 
-  it("returns undefined testh an empty array", () => {
+  it('returns undefined testh an empty array', () => {
     assert.strictEqual(findLongestWord([]), undefined);
   });
 
-  it("returns the word test an 1-word array", () => {
-    assert.strictEqual(findLongestWord(["test"]), "test");
+  it('returns the word test an 1-word array', () => {
+    assert.strictEqual(findLongestWord(['test']), 'test');
   });
 
-  it("returns the first occurrence word when longest have multiple occurrences ", () => {
-    assert.strictEqual(findLongestWord(["foo", "bar"]), "foo");
-    assert.strictEqual(findLongestWord(["bar", "foo"]), "bar");
+  it('returns the first occurrence word when longest have multiple occurrences ', () => {
+    assert.strictEqual(findLongestWord(['foo', 'bar']), 'foo');
+    assert.strictEqual(findLongestWord(['bar', 'foo']), 'bar');
   });
 
-  // it("returns the longest occurrence when test has multiple words", () => {
-  //   let words = ["a", "zab", "12abc", "$$abcd", "abcde", "factoriaF5"];
-  //   for (let i = 0; i < 10; i++) {
-  //     assert.strictEqual(findLongestWord(shuffle(words)), "factoriaF5");
-  //   }
-  // });
+  it('returns the longest occurrence when test has multiple words', () => {
+    let words = ['a', 'zab', '12abc', '$$abcd', 'abcde', 'factoriaF5'];
+    for (let i = 0; i < 10; i++) {
+      assert.strictEqual(findLongestWord(shuffle(words)), 'factoriaF5');
+    }
+  });
 });
 
-/* describe("Calculating a Sum - sumArray #3", () => {
-  it("Defines sumArray", () => {
-    assert.strictEqual(typeof sumArray, "function");
+describe('Calculating a Sum - sumArray #3', () => {
+  it('Defines sumArray', () => {
+    assert.strictEqual(typeof sumArray, 'function');
   });
 
-  it("returns zero testh an empty array", () => {
+  it('returns zero testh an empty array', () => {
     assert.strictEqual(sumArray([]), 0);
   });
 
-  it("returns the number testh one number array", () => {
+  it('returns the number testh one number array', () => {
     assert.strictEqual(sumArray([4]), 4);
   });
 
-  it("returns zero if all elements are zero", () => {
+  it('returns zero if all elements are zero', () => {
     assert.strictEqual(sumArray([0, 0, 0, 0, 0]), 0);
   });
 
-  it("returns the sum, potestive", () => {
+  it('returns the sum, potestive', () => {
     assert.strictEqual(sumArray([1, 2, 3, 4, 5]), 15);
   });
 
-  it("returns the sum, negative", () => {
+  it('returns the sum, negative', () => {
     assert.strictEqual(sumArray([-1, -2, -3, -4, -5]), -15);
   });
-}); */
+});
 
-/* describe("Calculating the Average - averageNumbers #4", () => {
-  it("Defines averageNumbers", () => {
-    assert.strictEqual(typeof averageNumbers, "function");
+describe('Calculating the Average - averageNumbers #4', () => {
+  it('Defines averageNumbers', () => {
+    assert.strictEqual(typeof averageNumbers, 'function');
   });
 
-  it("returns undefined testh an empty array", () => {
+  it('returns undefined testh an empty array', () => {
     assert.strictEqual(averageNumbers([]), undefined);
   });
 
-  it("returns the average of a unique element array", () => {
+  it('returns the average of a unique element array', () => {
     assert.strictEqual(averageNumbers([9]), 9);
   });
 
-  it("returns the average even testh negative values", () => {
+  it('returns the average even testh negative values', () => {
     assert.strictEqual(averageNumbers([9, -3, -4, 6]), 2);
   });
 
-  it("returns the average of the array", () => {
+  it('returns the average of the array', () => {
     assert.strictEqual(averageNumbers([9, 10, 82, 92, 32, 102, 58]), 55);
   });
 
-  it("returns the average of the array, float result", () => {
+  it('returns the average of the array, float result', () => {
     assert.strictEqual(averageNumbers([1, 2]), 1.5);
   });
-}); */
+});
 
-/* describe("Calculating the Average - averageWordLength #5", () => {
-  it("Defines averageWordLength", () => {
-    assert.strictEqual(typeof averageWordLength, "function");
+describe('Calculating the Average - averageWordLength #5', () => {
+  it('Defines averageWordLength', () => {
+    assert.strictEqual(typeof averageWordLength, 'function');
   });
 
-  it("returns undefined testh an empty array", () => {
+  it('returns undefined testh an empty array', () => {
     assert.strictEqual(averageWordLength([]), undefined);
   });
 
-  it("returns the length of a unique element array", () => {
-    assert.strictEqual(averageWordLength(["bcncodes"]), 8);
+  it('returns the length of a unique element array', () => {
+    assert.strictEqual(averageWordLength(['bcncodes']), 8);
   });
 
-  it("returns the length of a unique element array, float", () => {
-    assert.strictEqual(averageWordLength(["a", "ab"]), 1.5);
+  it('returns the length of a unique element array, float', () => {
+    assert.strictEqual(averageWordLength(['a', 'ab']), 1.5);
   });
 
-  it("returns the average of a the array", () => {
+  it('returns the average of a the array', () => {
     assert.strictEqual(
       averageWordLength([
-        "Bcncodes",
-        "Madrid",
-        "Barcelona",
-        "Paris",
-        "Miami",
-        "Mexico",
-        "Berlin",
-        "Programmers",
+        'Bcncodes',
+        'Madrid',
+        'Barcelona',
+        'Paris',
+        'Miami',
+        'Mexico',
+        'Berlin',
+        'Programmers',
       ]),
       7
     );
   });
 });
- */
-/* describe("Unique Arrays - uniquifyArray #6", () => {
-  it("Defines uniquifyArray", () => {
-    assert.strictEqual(typeof uniquifyArray, "function");
+
+describe('Unique Arrays - uniquifyArray #6', () => {
+  it('Defines uniquifyArray', () => {
+    assert.strictEqual(typeof uniquifyArray, 'function');
   });
 
-  it("returns undefined testh an empty array", () => {
+  it('returns undefined testh an empty array', () => {
     assert.strictEqual(uniquifyArray([]), undefined);
   });
-
-  it("returns the array when having a single element", () => {
-    assert.strictEqual(uniquifyArray(["FactoriaF5"])).toEqual(["FactoriaF5"]);
+  //deepStrictEqual para comparar arrays en node.js
+  it('returns the array when having a single element', () => {
+    assert.deepStrictEqual(uniquifyArray(['FactoriaF5']), ['FactoriaF5']);
   });
 
-  it("returns the correct array when having an array of the same element", () => {
-    assert
-      .strictEqual(uniquifyArray(["FactoriaF5", "FactoriaF5", "FactoriaF5"]))
-      .toEqual(["FactoriaF5"]);
+  it('returns the correct array when having an array of the same element', () => {
+    assert.deepStrictEqual(
+      uniquifyArray(['FactoriaF5', 'FactoriaF5', 'FactoriaF5']),
+      ['FactoriaF5']
+    );
+  });
+  it('returns the same array when no element is repeated', () => {
+    assert.deepStrictEqual(uniquifyArray(['Cat', 'Dog', 'Cow']), [
+      'Cat',
+      'Dog',
+      'Cow',
+    ]);
   });
 
-  it("returns the same array when no element is repeated", () => {
-    assert
-      .strictEqual(uniquifyArray(["Cat", "Dog", "Cow"]))
-      .toEqual(["Cat", "Dog", "Cow"]);
+  it('returns the uniquified array', () => {
+    assert.deepStrictEqual(
+      uniquifyArray([
+        'iPhone',
+        'Samsung',
+        'Android',
+        'iOS',
+        'iPhone',
+        'Samsung',
+        'Nokia',
+        'Blackberry',
+        'Android',
+      ]),
+      ['iPhone', 'Samsung', 'Android', 'iOS', 'Nokia', 'Blackberry']
+    );
+  });
+});
+
+describe('Finding Elements - doesWordExist #7', () => {
+  it('Defines doesWordExist', () => {
+    assert.strictEqual(typeof doesWordExist, 'function');
   });
 
-  it("returns the uniquified array", () => {
-    assert
-      .strictEqual(
-        uniquifyArray([
-          "iPhone",
-          "Samsung",
-          "Android",
-          "iOS",
-          "iPhone",
-          "Samsung",
-          "Nokia",
-          "Blackberry",
-          "Android",
-        ])
-      )
-      .toEqual(["iPhone", "Samsung", "Android", "iOS", "Nokia", "Blackberry"]);
-  });
-}); */
-
-/* describe("Finding Elements - doesWordExist #7", () => {
-  it("Defines doesWordExist", () => {
-    assert.strictEqual(typeof doesWordExist, "function");
-  });
-
-  it("returns false testh an empty array", () => {
+  it('returns false testh an empty array', () => {
     assert.strictEqual(doesWordExist([]), false);
   });
 
-  it("returns true if the word we are looking is the only one on the array", () => {
-    assert.strictEqual(doesWordExist(["machine"], "machine"), true);
+  it('returns true if the word we are looking is the only one on the array', () => {
+    assert.strictEqual(doesWordExist(['machine'], 'machine'), true);
   });
 
-  it("returns false if the word we are looking is not in the array", () => {
+  it('returns false if the word we are looking is not in the array', () => {
     assert.strictEqual(
       doesWordExist(
-        ["machine", "poison", "eat", "apple", "horse"],
-        "ratatouille"
+        ['machine', 'poison', 'eat', 'apple', 'horse'],
+        'ratatouille'
       ),
       false
     );
   });
 
-  it("returns true if the word we are looking is in the array", () => {
+  it('returns true if the word we are looking is in the array', () => {
     assert.strictEqual(
       doesWordExist(
-        ["pizza", "sandwich", "snack", "soda", "book", "computer"],
-        "book"
+        ['pizza', 'sandwich', 'snack', 'soda', 'book', 'computer'],
+        'book'
       ),
       true
     );
   });
-}); */
+});
 
-/* describe("Counting Repetion - howManyTimes #8", () => {
-  it("Defines howManyTimes", () => {
-    assert.strictEqual(typeof howManyTimes, "function");
+describe('Counting Repetion - howManyTimes #8', () => {
+  it('Defines howManyTimes', () => {
+    assert.strictEqual(typeof howManyTimes, 'function');
   });
-
-  it("returns false testh an empty array", () => {
+  it('returns false testh an empty array', () => {
     assert.strictEqual(howManyTimes([]), undefined);
   });
-
-  it("returns one when the word appears only one time on the array", () => {
-    assert.strictEqual(howManyTimes(["a", "b", "c"], "a"), 1);
+  it('returns one when the word appears only one time on the array', () => {
+    assert.strictEqual(howManyTimes(['a', 'b', 'c'], 'a'), 1);
   });
-
-  it("returns zero when the word does not appears on the array", () => {
-    assert.strictEqual(howManyTimes(["a", "b", "c"], "z"), 0);
+  it('returns zero when the word does not appears on the array', () => {
+    assert.strictEqual(howManyTimes(['a', 'b', 'c'], 'z'), 0);
   });
-
-  it("returns five when the word appears 5 times on the array", () => {
+  it('returns five when the word appears 5 times on the array', () => {
     assert.strictEqual(
       howManyTimes(
         [
-          "basketball",
-          "football",
-          "tennis",
-          "rugby",
-          "rugby",
-          "ping pong",
-          "rugby",
-          "basketball",
-          "rugby",
-          "handball",
-          "rugby",
+          'basketball',
+          'football',
+          'tennis',
+          'rugby',
+          'rugby',
+          'ping pong',
+          'rugby',
+          'basketball',
+          'rugby',
+          'handball',
+          'rugby',
         ],
-        "rugby"
+        'rugby'
       ),
       5
     );
   });
-}); */
+});
 
-/* describe("Counting Repetion - greatestProduct", () => {
-  it("Defines greatestProduct #9", () => {
-    assert.strictEqual(typeof greatestProduct, "function");
+describe('Counting Repetion - greatestProduct', () => {
+  it('Defines greatestProduct #9', () => {
+    assert.strictEqual(typeof greatestProduct, 'function');
   });
 
-  it("Return 1 when all the numbers of the arrays are 1", () => {
+  it('Return 1 when all the numbers of the arrays are 1', () => {
     let matrix = [
       [1, 1, 1, 1],
       [1, 1, 1, 1],
@@ -287,7 +283,7 @@ describe("Finding Longest Word - findLongestWord #2", () => {
     assert.strictEqual(greatestProduct(matrix), 1);
   });
 
-  it("Return maxProduct when all max is horizontal", () => {
+  it('Return maxProduct when all max is horizontal', () => {
     let matrix = [
       [9, 9, 9, 9],
       [1, 1, 1, 1],
@@ -297,7 +293,7 @@ describe("Finding Longest Word - findLongestWord #2", () => {
     assert.strictEqual(greatestProduct(matrix), 6561);
   });
 
-  it("Return maxProduct when all max is horizontal, not first row", () => {
+  it('Return maxProduct when all max is horizontal, not first row', () => {
     let matrix = [
       [1, 1, 1, 1],
       [1, 1, 1, 1],
@@ -307,7 +303,7 @@ describe("Finding Longest Word - findLongestWord #2", () => {
     assert.strictEqual(greatestProduct(matrix), 6561);
   });
 
-  it("Return maxProduct when all max is vertical", () => {
+  it('Return maxProduct when all max is vertical', () => {
     let matrix = [
       [9, 1, 1, 1],
       [9, 1, 1, 1],
@@ -317,7 +313,7 @@ describe("Finding Longest Word - findLongestWord #2", () => {
     assert.strictEqual(greatestProduct(matrix), 6561);
   });
 
-  it("Return maxProduct when all max is vertical, not first column", () => {
+  it('Return maxProduct when all max is vertical, not first column', () => {
     let matrix = [
       [1, 9, 1, 1],
       [1, 9, 1, 1],
@@ -327,7 +323,7 @@ describe("Finding Longest Word - findLongestWord #2", () => {
     assert.strictEqual(greatestProduct(matrix), 6561);
   });
 
-  it("Return maxProduct when all max is diagonal", () => {
+  it('Return maxProduct when all max is diagonal', () => {
     let matrix = [
       [9, 1, 1, 1],
       [1, 9, 1, 1],
@@ -337,7 +333,7 @@ describe("Finding Longest Word - findLongestWord #2", () => {
     assert.strictEqual(greatestProduct(matrix), 6561);
   });
 
-  it("Return 16 when all the numbers of the arrays are 2", () => {
+  it('Return 16 when all the numbers of the arrays are 2', () => {
     let matrix = [
       [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
       [
@@ -417,6 +413,6 @@ describe("Finding Longest Word - findLongestWord #2", () => {
         67, 48,
       ],
     ];
-    assert.strictEqual(greatestProduct(matrix), 51267216);
+    assert.strictEqual(greatestProduct(matrix), 70600674);
   });
-}); */
+});
